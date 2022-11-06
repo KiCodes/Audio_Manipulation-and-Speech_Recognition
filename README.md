@@ -14,5 +14,5 @@ in the 'Sample_wav_manipulation' directory we have 4 python files as follows:
 4. load_mp3: involves the manipulation of an audion file in terms of volume(in db), repetition, fading in/out and changing file format/extension
 
 The main.py, api_config and api_communication connect to the assemblyAI API in order to upload file to be transcribed, extract url of the audio,
-and post it to be transcribed, which then returns a status json amongst other information. The transcribed words are then stored in a text file along with the other
+and post it to be transcribed. This then returns a json 'status' amongst other information. A loop is ran which continues to GET a request from the assemblyAI every 30 seconds until the status is completed or throws and error. The transcribed audio are then stored in a text file along with the other
 recorded audio in the project (audios_n_txt)
